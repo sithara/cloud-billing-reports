@@ -24,7 +24,8 @@ bucket aws_reports, aws_reports_temp
 Create master and temp tables for azure and aws. The master tables has historic data whereas the temp tables maintain previous two months data. The temp tables are created to improve performance of the scripts.
 
 
-Run the infrareport report script to consolidate the aws and azure reports and saves it to a staging table INFRASTRUCTURE_REPORT_FINAL.
-Finally run `ruby infra_report.rb` script to customize your report with the required fields.
+Run the `ruby infra_report.rb` script to consolidate the aws and azure reports and save it to staging table INFRASTRUCTURE_REPORT_FINAL. The script also populates the OUT_INFRA_REPORT table, customized report
+
+
 SUBSCRIPTION_ENGAGEMENT_MAP
 OUT_INFRA_REPORT
