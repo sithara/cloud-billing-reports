@@ -17,7 +17,9 @@ If you have set up an aws s3 bucket to receive usage report, configure aws https
 
 ## Consolidate Azure and AWS Billing Report
 
-Create master and temp tables for azure and aws 
+Create master and temp tables for azure and aws. The master tables has historic data whereas the temp tables maintain previous two months data. The temp tables are created to improve performance of the scripts.
 
+
+Run the infrareport report script to consolidate the aws and azure reports. The  
 
 
