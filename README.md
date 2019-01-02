@@ -8,3 +8,12 @@ Enable Azure Usage Reports to obtain an api key, refer https://docs.microsoft.co
 
 ## Azure Usage Report
 
+Set the authorization key at https://github.com/sithara/cloud-billing-reports/blob/master/azure.rb#L20 and run the script to obtain azure usage reports for the last 2 months.
+
+## AWS Usage Report
+
+If you have set up an aws s3 bucket to receive usage report, configure aws https://github.com/sithara/cloud-billing-reports/blob/master/aws.rb#L60-L64 and specify the bucket name in https://github.com/sithara/cloud-billing-reports/blob/master/aws.rb#L18
+
+
+
+
