@@ -6,9 +6,20 @@ delete_azure_report_sql = "DELETE  FROM azure_billing_report where report_date >
 
 delete_aws_report_sql = "DELETE FROM aws_reports where report_date > '#{(Time.now - 2.months).strftime('%Y-%m-01')}'"
 
-ActiveRecord::Base.connection.raw_connection.execute(delete_azure_report_sql).do
-ActiveRecord::Base.connection.raw_connection.execute(delete_aws_report_sql).do
+delete_aws_ey_report_sql = "DELETE FROM aws_ey_reports where report_date > '#{(Time.now - 2.months).strftime('%Y-%m-01')}'"
+
+p "Delete azure reports"
 ActiveRecord::Base.connection.raw_connection.execute("Truncate table azure_billing_report_temp").do
+ActiveRecord::Base.connection.raw_connection.execute(delete_azure_report_sql).do
+
+p "Delete AwsEy reports"
+ActiveRecord::Base.connection.raw_connection.execute("Truncate table aws_ey_reports_temp").do
+ActiveRecord::Base.connection.raw_connection.execute(delete_aws_ey_report_sql).do
+
+p "Delete aws reports"
+ActiveRecord::Base.connection.raw_connection.execute(delete_aws_report_sql).do
+#ActiveRecord::Base.connection.raw_connection.execute("Truncate table azure_billing_report_temp").do
+p "Delete aws reports temp"
 ActiveRecord::Base.connection.raw_connection.execute("Truncate table aws_reports_temp").do
 ActiveRecord::Base.connection.raw_connection.execute("Truncate table INFRASTRUCTURE_REPORT_FINAL").do
 ActiveRecord::Base.remove_connection(conn)
