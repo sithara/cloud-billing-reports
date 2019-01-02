@@ -1,0 +1,10 @@
+credentials:
+  engagement:
+    account1:
+       name: 'Test'
+       access_key: 'your_access_key'
+       secret_access_key: 'your_secret_key'
+    account2:
+      name: 'Test2'
+      access_key: 'your_access_key2'
+      secret_access_key: 'your_secret_key2'
