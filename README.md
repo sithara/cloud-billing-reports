@@ -15,5 +15,9 @@ Set the authorization key at https://github.com/sithara/cloud-billing-reports/bl
 If you have set up an aws s3 bucket to receive usage report, configure aws https://github.com/sithara/cloud-billing-reports/blob/master/aws.rb#L60-L64 and specify the bucket name in https://github.com/sithara/cloud-billing-reports/blob/master/aws.rb#L18
 
 
+## Consolidate Azure and AWS Billing Report
+
+Create master and temp tables for azure and aws 
+
 
 
