@@ -15,7 +15,7 @@ class AwsBilling
      billing_periods.each do |duration|
 
     File.open("aws.csv", 'wb') do |file|
-        Aws::S3::Client.new.get_object(bucket: "eyc3billing", key: 'your-key-'+duration+'.csv') do |chunk|
+        Aws::S3::Client.new.get_object(bucket: "your-bucket-name", key: 'your-key-'+duration+'.csv') do |chunk|
          file.write(chunk)
        end
     end
