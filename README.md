@@ -1,6 +1,6 @@
 # Azure and AWS Cloud Usage Reports
 
-Cloud Billing Reports helps users consolidate billing reports pulled in from Azure and AWS , grouped by engagements. 
+Cloud Billing Reports helps users consolidate billing reports pulled in from Azure and AWS , grouped by engagement. 
 
 ## Requirements
 
